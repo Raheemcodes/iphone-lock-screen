@@ -1,0 +1,26 @@
+@import "../shared/shared";
+
+:host {
+  @include centered();
+  width: 100%;
+  flex-direction: column-reverse;
+  margin-top: toRem(58);
+}
+
+h1 {
+  font-family: "SF Pro Rounded", sans-serif;
+  font-size: toRem(96);
+  font-weight: 600;
+  line-height: 0.9;
+  // letter-spacing: toRem(-4);
+  text-align: center;
+}
+
+p {
+  font-family: "SF Pro Text", sans-serif;
+  font-size: toRem(20);
+  font-weight: 600;
+  line-height: toRem(18);
+  letter-spacing: toRem(-1);
+  text-align: center;
+}
