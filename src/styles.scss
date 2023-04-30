@@ -14,7 +14,16 @@
   font-family: "SF Pro Text";
   src: local(SF-Pro-Text-Medium),
     url("./assets/fonts/SF-Pro-Text-Medium.otf") format("opentype");
-  font-weight: 400;
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  src: local(SF-Pro-Text-Semibold),
+    url("./assets/fonts/SF-Pro-Text-Semibold.otf") format("opentype");
+  font-weight: 600;
   font-display: block;
   font-style: normal;
 }
@@ -38,16 +47,25 @@
 }
 
 @font-face {
-  font-family: "SF Pro Text";
+  font-family: "SF Pro Rounded";
   src: local(SF-Pro-Rounded-Medium),
     url("./assets/fonts/SF-Pro-Rounded-Medium.otf") format("opentype");
-  font-weight: 400;
+  font-weight: 500;
   font-display: block;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "SF Pro Text";
+  font-family: "SF Pro Rounded";
+  src: local(SF-Pro-Rounded-Semibold),
+    url("./assets/fonts/SF-Pro-Rounded-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-display: block;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
   src: local(SF-Pro-Rounded-Bold),
     url("./assets/fonts/SF-Pro-Rounded-Bold.otf") format("opentype");
   font-weight: 700;

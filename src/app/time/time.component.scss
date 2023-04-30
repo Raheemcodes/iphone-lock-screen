@@ -4,7 +4,7 @@
   @include centered();
   width: 100%;
   flex-direction: column-reverse;
-  margin-top: toRem(58);
+  padding-top: toRem(58);
 }
 
 h1 {
@@ -12,8 +12,9 @@ h1 {
   font-size: toRem(96);
   font-weight: 600;
   line-height: 0.9;
-  // letter-spacing: toRem(-4);
+  letter-spacing: toRem(-4);
   text-align: center;
+  color: #fbfbfbe5;
 }
 
 p {
@@ -23,4 +24,5 @@ p {
   line-height: toRem(18);
   letter-spacing: toRem(-1);
   text-align: center;
+  color: rgba(228, 228, 228, 0.98);
 }

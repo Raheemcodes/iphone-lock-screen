@@ -1,0 +1,147 @@
+@import "../shared/shared";
+
+:host {
+  @include column-centered();
+  width: 100%;
+  background: #eaeaeacc;
+  background-blend-mode: luminosity;
+  border-radius: toRem(22);
+  gap: toRem(8);
+  padding: toRem(12) toRem(16);
+}
+
+.pic_title__container {
+  @include between-centered();
+  width: 100%;
+  gap: toRem(20);
+  padding-right: toRem(8);
+}
+
+.music_cover {
+  width: toRem(53);
+  height: toRem(53);
+  border-radius: toRem(8);
+  flex-shrink: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title_artist__container {
+  width: 100%;
+
+  .title {
+    font-family: "SF Pro Text", sans-serif;
+    font-size: toRem(16);
+    font-weight: 600;
+    line-height: toRem(18);
+    letter-spacing: toRem(-0.41);
+    color: var(--black-10);
+    margin-bottom: toRem(2);
+  }
+
+  .artist {
+    font-family: "SF Pro Text", sans-serif;
+    font-size: toRem(14);
+    font-weight: 400;
+    line-height: toRem(18);
+    color: var(--black-10);
+  }
+}
+
+.audio {
+  width: toRem(22);
+  height: toRem(18);
+  flex-shrink: 0;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.length_conainer {
+  @include between-centered();
+  width: 100%;
+  gap: toRem(12);
+  padding: 0 toRem(4);
+
+  .length_covered__value,
+  .length_remaining__value {
+    font-family: "SF Pro Text", sans-serif;
+    font-size: toRem(12);
+    font-weight: 400;
+    line-height: toRem(18);
+    letter-spacing: toRem(-0.41);
+    color: #565656;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .length {
+    @include centered();
+    justify-content: flex-start;
+    width: 100%;
+    height: toRem(6.5);
+    background: #0000003b;
+    border-radius: toRem(8);
+    overflow: hidden;
+
+    .length_covered {
+      width: 26.18%;
+      height: toRem(7);
+      background-color: #00000066;
+      // border-top-left-radius: toRem(8);
+      // border-bottom-left-radius: toRem(8);
+    }
+  }
+}
+
+.controls_podcast__container {
+  @include centered();
+  position: relative;
+  width: 100%;
+  padding: 0 toRem(8);
+}
+
+.controls {
+  @include centered();
+  gap: toRem(36);
+}
+
+.prev,
+.next {
+  @include display-flex();
+  width: toRem(32);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.play {
+  @include display-flex();
+  width: toRem(32);
+  padding-left: toRem(4);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.podcast {
+  position: absolute;
+  right: 0;
+  width: toRem(25);
+  height: toRem(25);
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

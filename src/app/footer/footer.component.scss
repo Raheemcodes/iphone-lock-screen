@@ -1,0 +1,17 @@
+@import "../shared/shared";
+
+:host {
+  @include between-centered();
+  position: absolute;
+  width: toRem(257);
+  bottom: toRem(35);
+}
+
+.flash_light,
+.camera {
+  @include centered();
+  width: toRem(44);
+  height: toRem(44);
+  background: #00000033;
+  border-radius: 50%;
+}

@@ -1,18 +1,47 @@
 @import "./shared/shared";
 
 :host {
-  display: block;
+  @include column-centered-start();
   width: 100%;
   height: 100%;
-  background-image: url("../assets/background/tokyo.jpg");
+  background-image: url("../assets/images/tokyo.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
+
   // https://www.pinterest.com/pin/956733514567863784/
+
+  @media screen and (min-width: $sm) {
+    padding: toRem(24);
+  }
 }
 
 main {
   @include column-centered-start();
   width: 100%;
+  max-width: toRem(562);
   height: 80%;
+
+  // @media screen and (min-width: $lg) {
+  //   max-width: toRem(768);
+  // }
+}
+
+.time_widget__container {
+  @include column-centered();
+  width: 100%;
+  gap: toRem(12);
+  margin-bottom: toRem(18);
+}
+
+.music_controller__container {
+  width: 100%;
+  padding: 0 toRem(8);
+}
+
+.notification_container {
+  width: 100%;
+  margin-top: toRem(30);
+  padding: 0 toRem(12);
 }

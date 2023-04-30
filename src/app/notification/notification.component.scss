@@ -1,0 +1,101 @@
+@import "../shared/shared";
+
+:host {
+  @include column-flex();
+  width: 100%;
+  gap: toRem(8);
+}
+
+header {
+  @include between-centered();
+  width: 100%;
+  padding: toRem(3.5) 0;
+}
+
+h2 {
+  font-family: "SF Pro Text", sans-serif;
+  font-size: toRem(24);
+  font-weight: 400;
+  line-height: toRem(18);
+  letter-spacing: toRem(-0.41);
+}
+
+.close {
+  @include centered();
+  width: toRem(32);
+  height: toRem(32);
+  background: #f2f2f280;
+  border-radius: 50%;
+
+  svg {
+    width: toRem(12);
+    height: toRem(12);
+  }
+}
+
+section {
+  width: 100%;
+}
+
+.notification_container__list {
+  @include column-centered-start();
+  list-style: none;
+  width: 100%;
+}
+
+.notification_container {
+  @include column-centered-start();
+  width: 100%;
+}
+
+.notfication_list {
+  @include column-centered-start();
+  list-style: none;
+  width: 100%;
+}
+
+.notification {
+  @include between-centered();
+  width: 100%;
+  padding: toRem(12);
+  gap: toRem(8);
+  background: #eaeaeacc;
+  border-radius: toRem(22);
+}
+
+.notification_img {
+  width: toRem(38);
+  height: toRem(38);
+  background: #000000cc;
+  border-radius: toRem(8);
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.notification_content {
+  @include column-flex();
+  width: 100%;
+  gap: toRem(2);
+}
+
+.notification_title {
+  font-family: "SF Pro Text", sans-serif;
+  font-size: toRem(16);
+  font-weight: 600;
+  line-height: toRem(18);
+  letter-spacing: toRem(-0.41);
+  color: var(--black-10);
+}
+
+.notification_desc {
+  font-family: "SF Pro Text", sans-serif;
+  font-size: toRem(14);
+  font-weight: 400;
+  line-height: toRem(18);
+  color: var(--black-10);
+}
