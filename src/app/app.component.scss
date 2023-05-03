@@ -21,7 +21,6 @@
 #main_container {
   @include column-centered-start();
   width: 100%;
-  max-width: toRem(562);
   height: 85%;
   overflow: auto;
 
@@ -30,13 +29,14 @@
   }
 
   /* Hide scrollbar for IE, Edge and Firefox */
-
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
 
-  // @media screen and (min-width: $lg) {
-  //   max-width: toRem(768);
-  // }
+.container {
+  @include column-centered-start();
+  width: 100%;
+  max-width: toRem(562);
 }
 
 .time_widget__container {
