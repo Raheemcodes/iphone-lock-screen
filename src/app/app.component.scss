@@ -24,6 +24,15 @@
   height: 85%;
   overflow: auto;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
   // @media screen and (min-width: $lg) {
   //   max-width: toRem(768);
   // }

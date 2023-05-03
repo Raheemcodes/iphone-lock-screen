@@ -16,8 +16,10 @@ import { NotificationList } from './notification.model';
   styleUrls: ['./notification.component.scss'],
 })
 export class NotificationComponent implements OnInit, AfterViewInit {
-  @ViewChild('listEl') list!: ElementRef<HTMLElement>;
+  @ViewChild('listEl') listEl!: ElementRef<HTMLElement>;
   main!: HTMLElement;
+  list!: HTMLElement;
+  item!: NodeListOf<HTMLElement>;
 
   notificationList: NotificationList[] = [
     {
@@ -141,6 +143,8 @@ export class NotificationComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
+    this.list = this.listEl.nativeElement;
+    this.item = this.list.querySelectorAll('.notification_container');
     this.setListHeight();
     this.adjustStyle();
   }
@@ -150,16 +154,11 @@ export class NotificationComponent implements OnInit, AfterViewInit {
   }
 
   setListHeight(): void {
-    const list: HTMLElement = this.list.nativeElement;
-    const item: NodeListOf<HTMLElement> = list.querySelectorAll(
-      '.notification_container'
-    );
-
     let height: number = 0;
     const gap: number = 8;
 
-    item.forEach((element, idx) => {
-      if (idx == item.length - 1) {
+    this.item.forEach((element, idx) => {
+      if (idx == this.item.length - 1) {
         height += this.getHeight(<HTMLElement>element.firstElementChild) * 2;
         return;
       }
@@ -167,27 +166,22 @@ export class NotificationComponent implements OnInit, AfterViewInit {
       height += this.getHeight(<HTMLElement>element.firstElementChild) + gap;
     });
 
-    this.renderer.setStyle(list, 'height', `${height + 36}px`);
+    this.renderer.setStyle(this.list, 'height', `${height + 36}px`);
   }
 
   adjustStyle(): void {
-    const list: HTMLElement = this.list.nativeElement;
-    const item: NodeListOf<HTMLElement> = list.querySelectorAll(
-      '.notification_container'
-    );
-
     let height: number = 0;
     let count: number = 0;
     const gap: number = 8;
 
-    item.forEach((element) => {
+    this.item.forEach((element) => {
       const personalHeight: number = this.getHeight(
         <HTMLElement>element.firstElementChild
       );
 
       const bottomDistance =
         this.main.clientHeight -
-        (list.getBoundingClientRect().top + height + personalHeight);
+        (this.list.getBoundingClientRect().top + height + personalHeight);
 
       if (bottomDistance < personalHeight && bottomDistance > 0) {
         const scale: number = (bottomDistance / personalHeight) * 0.1;
