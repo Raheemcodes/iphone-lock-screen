@@ -4,7 +4,7 @@
   @include column-centered-start();
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/tokyo.jpg");
+  background-image: url("../assets/images/tokyo_sm.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -13,6 +13,7 @@
   // https://www.pinterest.com/pin/956733514567863784/
 
   @media screen and (min-width: $sm) {
+    background-image: url("../assets/images/tokyo_lg.jpg");
     padding: toRem(24);
   }
 }
