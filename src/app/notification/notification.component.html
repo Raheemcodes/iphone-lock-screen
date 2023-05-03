@@ -13,10 +13,31 @@
 </header>
 
 <section>
-  <ul class="notification_container__list">
-    <li class="notification_container">
-      <ul class="notfication_list">
-        <li class="notification">
+  <ul class="notification-container__list" #listEl>
+    <li
+      class="notification_container"
+      *ngFor="let notificationContainer of notificationList; let idx = index"
+      [ngStyle]="{ 'z-index': notificationList.length - idx }"
+    >
+      <ul
+        class="notfication_list"
+        #ul
+        (window:load)="setNotificationListHeight(ul)"
+      >
+        <li
+          class="notification"
+          *ngFor="
+            let notification of notificationContainer.notifications;
+            let i = index
+          "
+          [ngStyle]="{
+            'z-index': notificationList.length - i,
+            bottom:
+              i >= 0 && i == notificationContainer.notifications.length - 1
+                ? '0'
+                : '7px'
+          }"
+        >
           <div class="notification_img">
             <img
               width="180"
@@ -27,9 +48,9 @@
           </div>
 
           <div class="notification_content">
-            <div class="notification_title">Instagram</div>
+            <div class="notification_title">{{ notification.title }}</div>
             <div class="notification_desc">
-              Lorem ipsum dolor sit amet, consectetur
+              {{ notification.desc }}
             </div>
             <div class="notification_time">15m ago</div>
           </div>

@@ -12,6 +12,7 @@
   @include centered();
   width: toRem(44);
   height: toRem(44);
-  background: #00000033;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(32px);
   border-radius: 50%;
 }

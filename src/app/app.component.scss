@@ -17,11 +17,12 @@
   }
 }
 
-main {
+#main_container {
   @include column-centered-start();
   width: 100%;
   max-width: toRem(562);
-  height: 80%;
+  height: 85%;
+  overflow: auto;
 
   // @media screen and (min-width: $lg) {
   //   max-width: toRem(768);

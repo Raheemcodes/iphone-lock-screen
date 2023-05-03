@@ -3,8 +3,9 @@
 :host {
   @include column-centered();
   width: 100%;
-  background: #eaeaeacc;
+  background: rgba(234, 234, 234, 0.8);
   background-blend-mode: luminosity;
+  backdrop-filter: blur(toRem(40));
   border-radius: toRem(22);
   gap: toRem(8);
   padding: toRem(12) toRem(16);

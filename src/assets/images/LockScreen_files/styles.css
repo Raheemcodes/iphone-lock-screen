@@ -1,0 +1,146 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].rules[0].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js??ruleSet[1].rules[6].rules[1].use[0]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[6].rules[1].use[1]!./src/styles.scss?ngGlobalStyle ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "SF Pro Text";
+  src: local(SF-Pro-Text-Regular), url('SF-Pro-Text-Regular.otf') format("opentype");
+  font-weight: 400;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: local(SF-Pro-Text-Medium), url('SF-Pro-Text-Medium.otf') format("opentype");
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: local(SF-Pro-Text-Semibold), url('SF-Pro-Text-Semibold.otf') format("opentype");
+  font-weight: 600;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: local(SF-Pro-Text-Bold), url('SF-Pro-Text-Bold.otf') format("opentype");
+  font-weight: 700;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: local(SF-Pro-Rounded-Regular), url('SF-Pro-Rounded-Regular.otf') format("opentype");
+  font-weight: 400;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: local(SF-Pro-Rounded-Medium), url('SF-Pro-Rounded-Medium.otf') format("opentype");
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: local(SF-Pro-Rounded-Semibold), url('SF-Pro-Rounded-Semibold.otf') format("opentype");
+  font-weight: 600;
+  font-display: block;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: local(SF-Pro-Rounded-Bold), url('SF-Pro-Rounded-Bold.otf') format("opentype");
+  font-weight: 700;
+  font-display: block;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+* a {
+  text-decoration: none;
+  cursor: pointer;
+}
+* button {
+  font-family: var(--main-font);
+  cursor: pointer;
+  border: none;
+}
+
+:root {
+  --main-font: "SF Pro Text", sans-serif;
+  --main-color: #fff;
+  --black-10: #111;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-width: 17.5rem;
+  background-color: var(--main-color);
+  font-family: var(--main-font);
+  font-weight: 400;
+  color: var(--main-color);
+}
+@media (pointer: fine) and (hover: hover) {
+  html,
+  body {
+    scrollbar-color: var(--black-30) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0.5rem; /* width of the entire scrollbar */
+    height: 0.5rem; /* width of the entire scrollbar */
+  }
+  html::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+  }
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background: var(--black-30);
+    border-radius: 14px; /* creates padding around scroll thumb */
+  }
+  html::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:hover {
+    background: var(--black-40);
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+img[alt] {
+  position: relative;
+}
+img[alt]::after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: inherit;
+  font-family: var(--main-font);
+  content: "";
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map*/

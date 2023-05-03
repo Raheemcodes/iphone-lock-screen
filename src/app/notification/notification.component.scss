@@ -24,7 +24,8 @@ h2 {
   @include centered();
   width: toRem(32);
   height: toRem(32);
-  background: #f2f2f280;
+  background: rgba(242, 242, 242, 0.5);
+  backdrop-filter: blur(16px);
   border-radius: 50%;
 
   svg {
@@ -37,18 +38,26 @@ section {
   width: 100%;
 }
 
-.notification_container__list {
+.notification-container__list {
   @include column-centered-start();
+  position: relative;
   list-style: none;
   width: 100%;
+  gap: toRem(8);
 }
 
 .notification_container {
   @include column-centered-start();
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  position: sticky;
   width: 100%;
+  transform-origin: center top;
 }
 
 .notfication_list {
+  position: relative;
   @include column-centered-start();
   list-style: none;
   width: 100%;
@@ -59,8 +68,29 @@ section {
   width: 100%;
   padding: toRem(12);
   gap: toRem(8);
-  background: #eaeaeacc;
+  position: absolute;
+  background: rgba(177, 177, 177, 0.8);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(toRem(40));
+  transform: scale(0.9);
   border-radius: toRem(22);
+
+  &:nth-child(2) {
+    position: absolute;
+    background: rgba(213, 213, 213, 0.8);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(toRem(40));
+    transform: scale(0.95);
+    bottom: toRem(7);
+  }
+
+  &:nth-child(1) {
+    position: sticky;
+    background: rgba(234, 234, 234, 0.8);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(toRem(40));
+    transform: scale(1);
+  }
 }
 
 .notification_img {
@@ -79,6 +109,7 @@ section {
 
 .notification_content {
   @include column-flex();
+  position: relative;
   width: 100%;
   gap: toRem(2);
 }
@@ -98,4 +129,16 @@ section {
   font-weight: 400;
   line-height: toRem(18);
   color: var(--black-10);
+}
+
+.notification_time {
+  font-family: "SF Pro Text", sans-serif;
+  font-size: toRem(12);
+  font-weight: 400;
+  line-height: toRem(18);
+  letter-spacing: toRem(-0.41);
+  color: #565656;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
