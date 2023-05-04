@@ -150,6 +150,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
   }
 
   @HostListener('window:resize') resize() {
+    this.setListHeight();
     this.adjustStyle();
   }
 
@@ -212,7 +213,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
           );
         }
       } else if (bottomDistance <= 0) {
-        this.renderer.setStyle(element, 'bottom', `${16}px`);
+        this.renderer.setStyle(element, 'bottom', `${24}px`);
 
         if (count) {
           this.renderer.setStyle(element, 'transform', 'scale(0.8)');
