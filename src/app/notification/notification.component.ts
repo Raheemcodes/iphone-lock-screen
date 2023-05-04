@@ -221,7 +221,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
         }
 
         count++;
-      } else {
+      } else if (bottomDistance >= personalHeight) {
         this.renderer.setStyle(element, 'transform', 'scale(1)');
         this.renderer.setStyle(element, 'opacity', '1');
       }
