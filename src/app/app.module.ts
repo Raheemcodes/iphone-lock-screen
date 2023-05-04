@@ -7,6 +7,7 @@ import { TimeComponent } from './time/time.component';
 import { NotificationComponent } from './notification/notification.component';
 import { FooterComponent } from './footer/footer.component';
 import { WidgetComponent } from './widget/widget.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { WidgetComponent } from './widget/widget.component';
     FooterComponent,
     WidgetComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, NgOptimizedImage],
   providers: [],
   bootstrap: [AppComponent],
 })
