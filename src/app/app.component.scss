@@ -21,7 +21,7 @@
 #main_container {
   @include column-centered-start();
   width: 100%;
-  height: 85%;
+  height: calc(85% + toRem(32));
   overflow: auto;
 
   &::-webkit-scrollbar {
