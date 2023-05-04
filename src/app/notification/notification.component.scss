@@ -48,12 +48,10 @@ section {
 
 .notification_container {
   @include column-centered-start();
-  // position: absolute;
-  // left: 0;
-  // right: 0;
   position: sticky;
   width: 100%;
   transform-origin: center top;
+  transition: all 0.1s ease-out;
 }
 
 .notfication_list {

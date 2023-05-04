@@ -80,7 +80,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
         const scale: number = (bottomDistance / personalHeight) * 0.1;
         const finalScale = scale > 0.1 ? 0.1 : scale < 0 ? 0 : scale;
 
-        const opacity = 10 * scale;
+        const opacity = 10 * finalScale;
 
         this.renderer.setStyle(
           element,
@@ -97,7 +97,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
           this.renderer.setStyle(
             element.nextElementSibling,
             'transform',
-            `scale(${0.8 + scale})`
+            `scale(${0.8 + finalScale})`
           );
         }
       } else if (bottomDistance < 0) {
