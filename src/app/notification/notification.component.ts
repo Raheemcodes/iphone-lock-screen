@@ -76,7 +76,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
         this.main.clientHeight -
         (this.list.getBoundingClientRect().top + height + personalHeight);
 
-      if (bottomDistance < personalHeight && bottomDistance > 0) {
+      if (bottomDistance < personalHeight && bottomDistance >= 0) {
         const scale: number = (bottomDistance / personalHeight) * 0.1;
         const finalScale = scale > 0.1 ? 0.1 : scale < 0 ? 0 : scale;
 
@@ -100,7 +100,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
             `scale(${0.8 + scale})`
           );
         }
-      } else if (bottomDistance <= 0) {
+      } else if (bottomDistance < 0) {
         this.renderer.setStyle(element, 'bottom', `${32}px`);
 
         if (count) {
