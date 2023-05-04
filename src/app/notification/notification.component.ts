@@ -208,7 +208,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
           );
         }
       } else if (bottomDistance <= 0) {
-        this.renderer.setStyle(element, 'bottom', `${0}px`);
+        this.renderer.setStyle(element, 'bottom', `${32}px`);
 
         if (count) {
           this.renderer.setStyle(element, 'transform', 'scale(0.8)');
