@@ -9,6 +9,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { NotificationList } from './notification.model';
+import { notificationListData } from './notification.data';
 
 @Component({
   selector: 'app-notification',
@@ -21,120 +22,7 @@ export class NotificationComponent implements OnInit, AfterViewInit {
   list!: HTMLElement;
   item!: NodeListOf<HTMLElement>;
 
-  notificationList: NotificationList[] = [
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    {
-      notifications: [
-        { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-      ],
-    },
-    // {
-    //   notifications: [
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //   ],
-    // },
-    // {
-    //   notifications: [
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //   ],
-    // },
-    // {
-    //   notifications: [
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //   ],
-    // },
-    // {
-    //   notifications: [
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //     { title: 'Instagram', desc: 'Lorem ipsum dolor sit amet, consectetur' },
-    //   ],
-    // },
-  ];
-
+  notificationList: NotificationList[] = notificationListData;
   constructor(private renderer: Renderer2, private cd: ChangeDetectorRef) {}
 
   ngOnInit(): void {
